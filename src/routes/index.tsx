@@ -3,7 +3,7 @@ import { ArrowRight, Trees, MapPin, Compass } from "lucide-react";
 import { DRIVE_TIMES, LOTS, SITE } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { LotMap } from "@/components/lot-map";
-import { formatSqFt } from "@/lib/utils";
+import { formatSqFt, asset } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -12,7 +12,7 @@ function Home() {
     <main>
       <section className="relative min-h-screen overflow-hidden bg-forest-deep">
         <img
-          src="/images/hero.jpg"
+          src={asset("/images/hero.jpg")}
           alt="Northwest contemporary home among Douglas firs at dusk"
           className="absolute inset-0 size-full object-cover"
         />
@@ -95,7 +95,7 @@ function Home() {
           </div>
         </div>
         <img
-          src="/images/lane.jpg"
+          src={asset("/images/lane.jpg")}
           alt="Private lane of contemporary cedar houses in the firs"
           className="aspect-[4/3] w-full rounded-xl object-cover"
         />
@@ -183,7 +183,7 @@ function Home() {
       <section className="bg-paper-2">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-8 md:py-28">
           <img
-            src="/images/interior.jpg"
+            src={asset("/images/interior.jpg")}
             alt="Great room with a window wall into the firs"
             className="aspect-[4/3] w-full rounded-xl object-cover"
           />
@@ -249,17 +249,17 @@ function Home() {
         </div>
         <div className="grid grid-cols-2 gap-3">
           <img
-            src="/images/poulsbo-marina.jpg"
+            src={asset("/images/poulsbo-marina.jpg")}
             alt="Poulsbo marina on Liberty Bay"
             className="col-span-2 aspect-[16/9] w-full rounded-xl object-cover"
           />
           <img
-            src="/images/poulsbo-clock.jpg"
+            src={asset("/images/poulsbo-clock.jpg")}
             alt="Front Street clock in downtown Poulsbo"
             className="aspect-square w-full rounded-xl object-cover"
           />
           <img
-            src="/images/forest.jpg"
+            src={asset("/images/forest.jpg")}
             alt="Second-growth firs at the park edge"
             className="aspect-square w-full rounded-xl object-cover"
           />
@@ -268,7 +268,7 @@ function Home() {
 
       <section className="relative overflow-hidden bg-forest-deep text-paper">
         <img
-          src="/images/house-8.jpg"
+          src={asset("/images/house-8.jpg")}
           alt=""
           className="absolute inset-0 size-full object-cover opacity-40"
         />

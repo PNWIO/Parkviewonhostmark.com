@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { InquiryForm } from "@/components/inquiry-form";
 import { SITE } from "@/data/site";
+import { asset } from "@/lib/utils";
 
 type InquirySearch = {
   lot?: number;
@@ -68,7 +69,7 @@ function InquiryPage() {
               <li>
                 <a
                   className="text-sage underline-offset-4 hover:underline"
-                  href="/docs/Parkview%20PPlat%20PrePrelim%20-%206.25.2026.pdf"
+                  href={asset("/docs/Parkview%20PPlat%20PrePrelim%20-%206.25.2026.pdf")}
                 >
                   Pre-preliminary plat
                 </a>
@@ -76,7 +77,7 @@ function InquiryPage() {
               <li>
                 <a
                   className="text-sage underline-offset-4 hover:underline"
-                  href="/docs/Parkview%20Lots.pdf"
+                  href={asset("/docs/Parkview%20Lots.pdf")}
                 >
                   Lot-area exhibit
                 </a>

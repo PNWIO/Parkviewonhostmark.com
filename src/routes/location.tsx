@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { DRIVE_TIMES, SITE } from "@/data/site";
 import { Button } from "@/components/ui/button";
+import { asset } from "@/lib/utils";
 
 export const Route = createFileRoute("/location")({ component: LocationPage });
 
@@ -25,27 +26,27 @@ function LocationPage() {
 
       <div className="mx-auto grid max-w-6xl gap-3 px-5 md:grid-cols-3 md:px-8">
         <img
-          src="/images/poulsbo-front.jpg"
+          src={asset("/images/poulsbo-front.jpg")}
           alt="Front Street storefronts in Poulsbo"
           className="aspect-[4/3] w-full rounded-xl object-cover md:col-span-2 md:aspect-[16/9]"
         />
         <img
-          src="/images/poulsbo-clock.jpg"
+          src={asset("/images/poulsbo-clock.jpg")}
           alt="City of Poulsbo street clock on Front Street"
           className="aspect-[4/3] w-full rounded-xl object-cover"
         />
         <img
-          src="/images/poulsbo-marina.jpg"
+          src={asset("/images/poulsbo-marina.jpg")}
           alt="Liberty Bay marina"
           className="aspect-[4/3] w-full rounded-xl object-cover"
         />
         <img
-          src="/images/poulsbo-shop.jpg"
+          src={asset("/images/poulsbo-shop.jpg")}
           alt="Historic shop on Front Street"
           className="aspect-[4/3] w-full rounded-xl object-cover"
         />
         <img
-          src="/images/forest.jpg"
+          src={asset("/images/forest.jpg")}
           alt="Evergreen forest at the park edge"
           className="aspect-[4/3] w-full rounded-xl object-cover"
         />

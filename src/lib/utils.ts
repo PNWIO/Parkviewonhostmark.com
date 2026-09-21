@@ -12,3 +12,9 @@ export function formatSqFt(n: number) {
 export function formatAcres(n: number) {
   return n.toFixed(2).replace(/0+$/, "").replace(/\.$/, "") + " ac";
 }
+
+export function asset(path: string) {
+  const base = import.meta.env.BASE_URL || "/";
+  const rel = path.replace(/^\//, "");
+  return base.endsWith("/") ? base + rel : `${base}/${rel}`;
+}

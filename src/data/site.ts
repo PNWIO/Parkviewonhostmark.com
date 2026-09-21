@@ -1,3 +1,5 @@
+import { asset } from "@/lib/utils";
+
 export const SITE = {
   name: "Parkview at Hostmark",
   shortName: "Parkview",
@@ -44,7 +46,7 @@ export const LOTS: Lot[] = [
     acres: 0.11,
     homeSqFt: 1980,
     orientation: "Southwest · private lane",
-    homeImage: "/images/house-1.jpg",
+    homeImage: asset("/images/house-1.jpg"),
     homeName: "The Lane House",
     summary:
       "The first home you meet on the lane — a compact two-story cedar volume of about 1,980 SF, with a gravel court and Hostmark just beyond the open space.",
@@ -58,7 +60,7 @@ export const LOTS: Lot[] = [
     acres: 0.11,
     homeSqFt: 2140,
     orientation: "West · private lane",
-    homeImage: "/images/house-2.jpg",
+    homeImage: asset("/images/house-2.jpg"),
     homeName: "The Fir House",
     summary:
       "A 2,140 SF dark timber house in the trees. Shou sugi ban cedar and a glass corner looking into retained firs along the west line.",
@@ -72,7 +74,7 @@ export const LOTS: Lot[] = [
     acres: 0.11,
     homeSqFt: 1860,
     orientation: "West · private lane",
-    homeImage: "/images/house-3.jpg",
+    homeImage: asset("/images/house-3.jpg"),
     homeName: "The Court House",
     summary:
       "A pale-cedar court on a 5,000 SF lot — about 1,860 SF of house, a sheltered entry, mossy stones, and a garden wall of glass.",
@@ -86,7 +88,7 @@ export const LOTS: Lot[] = [
     acres: 0.11,
     homeSqFt: 2220,
     orientation: "Northwest · park edge",
-    homeImage: "/images/house-4.jpg",
+    homeImage: asset("/images/house-4.jpg"),
     homeName: "The Overlook",
     summary:
       "Northwest corner of Phase 1. A 2,220 SF cedar upper volume on a concrete plinth, with the park close at hand beyond the north line.",
@@ -100,7 +102,7 @@ export const LOTS: Lot[] = [
     acres: 0.17,
     homeSqFt: 2460,
     orientation: "East of the lane · south",
-    homeImage: "/images/house-5.jpg",
+    homeImage: asset("/images/house-5.jpg"),
     homeName: "The Rain House",
     summary:
       "A 7,500 SF mid-block lot east of the lane. The rain-screen cedar house is about 2,460 SF, with a steel carport and open space to the south.",
@@ -114,7 +116,7 @@ export const LOTS: Lot[] = [
     acres: 0.18,
     homeSqFt: 2740,
     orientation: "East of the lane · mid",
-    homeImage: "/images/house-6.jpg",
+    homeImage: asset("/images/house-6.jpg"),
     homeName: "The Canopy House",
     summary:
       "The largest of the mid-block lots at 7,885 SF. A 2,740 SF honey-cedar house, a balcony in the trees, and room for a true Northwest contemporary.",
@@ -128,7 +130,7 @@ export const LOTS: Lot[] = [
     acres: 0.16,
     homeSqFt: 2380,
     orientation: "East of the lane · north",
-    homeImage: "/images/house-7.jpg",
+    homeImage: asset("/images/house-7.jpg"),
     homeName: "The Shed House",
     summary:
       "North of the mid-block, under Lot 8. A 2,380 SF long shed-roof house on a 7,170 SF lot, a side terrace, and a short walk to the park-edge open space.",
@@ -142,7 +144,7 @@ export const LOTS: Lot[] = [
     acres: 0.3,
     homeSqFt: 3160,
     orientation: "North · Wilderness Park",
-    homeImage: "/images/house-8.jpg",
+    homeImage: asset("/images/house-8.jpg"),
     homeName: "The Park House",
     summary:
       "The signature parcel — 12,861 SF on the north line. A 3,160 SF park house among retained firs, with Poulsbo’s Wilderness Park at the back.",

@@ -3,7 +3,12 @@
 Marketing site for **Parkview at Hostmark** — eight Phase 1 custom lots on a
 private lane at 1272 NE Hostmark Street, Poulsbo, Washington.
 
-TanStack Start · Cloudflare Pages.
+Published from this repository with GitHub Pages.
+
+**Live:** https://pnwio.github.io/Parkviewonhostmark.com/
+
+Custom domain (after DNS is pointed at GitHub Pages):
+https://www.parkviewonhostmark.com
 
 ## Local development
 
@@ -16,39 +21,29 @@ npm run dev
 
 ```bash
 npm run typecheck
-npm run build
+GITHUB_PAGES=1 npm run build
 ```
 
-Production output is in `dist/`.
+Static output is in `dist/client/`.
 
-## Cloudflare Pages
+## GitHub Pages
 
-Connect this private GitHub repository in Cloudflare Pages with these settings:
+Every push to `main` builds and deploys via `.github/workflows/deploy.yml`.
+
+To attach `www.parkviewonhostmark.com`:
+
+1. Repo **Settings → Pages → Custom domain** → `www.parkviewonhostmark.com`
+2. At the DNS host, add a CNAME: `www` → `pnwio.github.io`
+3. Enable HTTPS once the certificate is issued
+
+## Cloudflare Pages (optional)
+
+Same source can be connected in Cloudflare Pages:
 
 | Setting | Value |
 |---|---|
 | Framework preset | None |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
+| Build output directory | `dist/client` |
+| Environment variable | leave `GITHUB_PAGES` unset |
 | Node version | 22 |
-| Root directory | `/` |
-
-Then attach the custom domain:
-
-- `parkviewonhostmark.com`
-- `www.parkviewonhostmark.com`
-
-Point both at this Pages project. Use a Cloudflare Redirect Rule so the apex
-forwards to `www`.
-
-Inquiry is email-first (`mailto:` to Ian Laughlin). No runtime bindings required.
-
-## Project structure
-
-```text
-src/data/site.ts           lots, contact, drive times
-src/routes/                pages (home, lots, location, inquiry)
-src/components/            header, footer, lot map, form
-public/images/             concept homes and Poulsbo photos
-public/docs/               plat, lot exhibit, pre-app letters
-```

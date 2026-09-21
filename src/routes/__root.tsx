@@ -7,6 +7,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import appCss from "../styles.css?url";
+import { asset } from "@/lib/utils";
 
 const APP_NAME = "Parkview at Hostmark";
 const CANONICAL = "https://www.parkviewonhostmark.com";
@@ -35,7 +36,7 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: asset("/favicon.svg") },
       { rel: "canonical", href: CANONICAL },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
