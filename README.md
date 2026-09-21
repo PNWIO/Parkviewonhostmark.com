@@ -1,35 +1,33 @@
 # parkviewonhostmark.com
 
-Marketing site for **Parkview at Hostmark** — eight Phase 1 custom lots on a
-private lane at 1272 NE Hostmark Street, Poulsbo, Washington.
+Marketing site for **Parkview at Hostmark**.
 
-**Live on GitHub Pages:** https://pnwio.github.io/
+**Live (GitHub Pages):** https://pnwio.github.io/
 
-Source of truth is this repo. The published files are in
-[PNWIO/PNWIO.github.io](https://github.com/PNWIO/PNWIO.github.io).
+Custom domain: `www.parkviewonhostmark.com` (Cloudflare DNS, zone is currently empty).
 
-Custom domain (needs DNS + Pages custom domain):
-https://www.parkviewonhostmark.com
-
-## Local development
-
-Node 22 or newer.
+## Local
 
 ```bash
 npm install
 npm run dev
-```
-
-```bash
-npm run typecheck
 npm run build
 ```
 
-Static output is in `dist/client/`.
+Static output: `dist/client/`.
 
-## Attach www.parkviewonhostmark.com
+## Cloudflare Pages (production)
 
-1. Open [PNWIO.github.io Settings → Pages](https://github.com/PNWIO/PNWIO.github.io/settings/pages)
-2. Custom domain: `www.parkviewonhostmark.com`
-3. At the DNS host, CNAME `www` → `pnwio.github.io`
-4. Enable HTTPS once the certificate is issued
+In [Cloudflare Dashboard → Workers & Pages](https://dash.cloudflare.com/?to=/:account/pages):
+
+1. **Create** → **Connect to Git** → `PNWIO/Parkviewonhostmark.com`
+2. Production branch: `main`
+3. Build command: `npm run build`
+4. Build output directory: `dist/client`
+5. Environment variables: none (`GITHUB_PAGES` must stay unset)
+6. Node version: `22`
+7. **Custom domains** → `www.parkviewonhostmark.com` and `parkviewonhostmark.com`
+
+Cloudflare will write the DNS records. Proxy can stay orange (unlike GitHub Pages).
+
+`wrangler.toml` already sets `pages_build_output_dir = "dist/client"`.
