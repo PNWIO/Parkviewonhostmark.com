@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.parkviewonhostmark.com/sitemap.xml
+Host: https://www.parkviewonhostmark.com

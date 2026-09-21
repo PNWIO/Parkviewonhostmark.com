@@ -1,0 +1,5 @@
+# Path aliases. Hostname redirects (apex ↔ www) are a Cloudflare Redirect Rule.
+/lots/  /lots  301
+/contact  /inquiry  301
+/enquire  /inquiry  301
+/plans    /lots     301
