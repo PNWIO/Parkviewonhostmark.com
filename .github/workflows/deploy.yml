@@ -39,6 +39,9 @@ jobs:
         run: cp dist/client/index.html dist/client/404.html
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
