@@ -3,11 +3,12 @@
 Marketing site for **Parkview at Hostmark** — eight Phase 1 custom lots on a
 private lane at 1272 NE Hostmark Street, Poulsbo, Washington.
 
-Published from this repository with GitHub Pages.
+**Live on GitHub Pages:** https://pnwio.github.io/
 
-**Live:** https://pnwio.github.io/Parkviewonhostmark.com/
+Source of truth is this repo. The published files are in
+[PNWIO/PNWIO.github.io](https://github.com/PNWIO/PNWIO.github.io).
 
-Custom domain (after DNS is pointed at GitHub Pages):
+Custom domain (needs DNS + Pages custom domain):
 https://www.parkviewonhostmark.com
 
 ## Local development
@@ -21,29 +22,14 @@ npm run dev
 
 ```bash
 npm run typecheck
-GITHUB_PAGES=1 npm run build
+npm run build
 ```
 
 Static output is in `dist/client/`.
 
-## GitHub Pages
+## Attach www.parkviewonhostmark.com
 
-Every push to `main` builds and deploys via `.github/workflows/deploy.yml`.
-
-To attach `www.parkviewonhostmark.com`:
-
-1. Repo **Settings → Pages → Custom domain** → `www.parkviewonhostmark.com`
-2. At the DNS host, add a CNAME: `www` → `pnwio.github.io`
-3. Enable HTTPS once the certificate is issued
-
-## Cloudflare Pages (optional)
-
-Same source can be connected in Cloudflare Pages:
-
-| Setting | Value |
-|---|---|
-| Framework preset | None |
-| Build command | `npm run build` |
-| Build output directory | `dist/client` |
-| Environment variable | leave `GITHUB_PAGES` unset |
-| Node version | 22 |
+1. Open [PNWIO.github.io Settings → Pages](https://github.com/PNWIO/PNWIO.github.io/settings/pages)
+2. Custom domain: `www.parkviewonhostmark.com`
+3. At the DNS host, CNAME `www` → `pnwio.github.io`
+4. Enable HTTPS once the certificate is issued
